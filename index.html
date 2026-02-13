@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>❤️</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#ff4b7d,#ff7aa8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+  color:#333;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  max-width:300px;
+}
+
+img{
+  width:150px;
+  margin-bottom:10px;
+}
+
+button{
+  border:none;
+  padding:12px 20px;
+  margin:10px;
+  border-radius:12px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+#yes{ background:#ff4b7d; color:white;}
+#no{ background:#ccc;}
+
+</style>
+</head>
+
+<body>
+
+<div class="card" id="page1">
+  <!-- შეცვალე შენი ფოტოს ლინკით -->
+  <img src="https://imgur.com/a/O4D7hK5">
+
+  <h3>ჰეი ბუ ❤️ იქნები ჩემი ვალენტინი?</h3>
+
+  <button id="yes" onclick="showLove()">კი!</button>
+  <button id="no" onclick="growYes()">არა</button>
+</div>
+
+<div class="card" id="page2" style="display:none;">
+  <img src="https://imgur.com/a/lplhWWI">
+  <h2>იეეეს! 🥰</h2>
+  <p>ვიცოდი რომ დამთანხმდებოდი ❤️</p>
+</div>
+
+<script>
+let size=16;
+
+function growYes(){
+  size+=6;
+  document.getElementById("yes").style.fontSize=size+"px";
+}
+
+function showLove(){
+  document.getElementById("page1").style.display="none";
+  document.getElementById("page2").style.display="block";
+}
+</script>
+
+</body>
+</html>
